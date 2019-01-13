@@ -1,0 +1,8 @@
+PROGRAM prog1
+VAR
+a1:INTEGER
+BEGIN
+READ(a1);
+b1:=10
+END.
+

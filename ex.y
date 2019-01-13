@@ -176,7 +176,7 @@ assign : TOK_ID TOK_EQUALS exp
 	{
 	if($1!=NULL)
 	{
-		printf("assigning %s=%d\n",$1,$3);
+		printf("Assigning %s=%d\n",$1,$3);
 		if(ts->exists($1)==0)
 		{
 			sprintf(msg,"%d:%d Eroare semantica assign: Variabila %s este folosita fara a fi declarata!", @1.first_line, @1.first_column, $1);
@@ -288,7 +288,6 @@ index_exp : TOK_ID TOK_EQUALS exp TOK_TO exp
 		yyerror(msg);
 		YYERROR;
 	}
-	printf("%d - %d\n",$3,$5);
 	if($1 != NULL){
 		if(ts->exists($1)==1)
 			ts->setValue($1,$3);

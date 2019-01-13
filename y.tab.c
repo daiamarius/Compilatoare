@@ -585,7 +585,7 @@ static const yytype_uint16 yyrline[] =
        0,   118,   118,   120,   122,   124,   126,   128,   154,   156,
      158,   163,   165,   167,   169,   171,   173,   175,   190,   192,
      194,   196,   198,   200,   202,   221,   223,   225,   251,   281,
-     283,   304,   306
+     283,   303,   305
 };
 #endif
 
@@ -1544,7 +1544,7 @@ yyreduce:
     {
 	if((yyvsp[-2].sir)!=NULL)
 	{
-		printf("assigning %s=%d\n",(yyvsp[-2].sir),(yyvsp[0].val));
+		printf("Assigning %s=%d\n",(yyvsp[-2].sir),(yyvsp[0].val));
 		if(ts->exists((yyvsp[-2].sir))==0)
 		{
 			sprintf(msg,"%d:%d Eroare semantica assign: Variabila %s este folosita fara a fi declarata!", (yylsp[-2]).first_line, (yylsp[-2]).first_column, (yyvsp[-2].sir));
@@ -1698,7 +1698,6 @@ yyreduce:
 		yyerror(msg);
 		YYERROR;
 	}
-	printf("%d - %d\n",(yyvsp[-2].val),(yyvsp[0].val));
 	if((yyvsp[-4].sir) != NULL){
 		if(ts->exists((yyvsp[-4].sir))==1)
 			ts->setValue((yyvsp[-4].sir),(yyvsp[-2].val));
@@ -1709,11 +1708,11 @@ yyreduce:
 		}
 		}
 	}
-#line 1713 "y.tab.c" /* yacc.c:1646  */
+#line 1712 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1717 "y.tab.c" /* yacc.c:1646  */
+#line 1716 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1948,7 +1947,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 308 "ex.y" /* yacc.c:1906  */
+#line 307 "ex.y" /* yacc.c:1906  */
 
 
 

@@ -6,9 +6,9 @@ BEGIN
 READ(a1);
 READ(a2);
 a3:=(a1+a2)*(a1-a2)+(a1-1)-(a2-2*3);
-b1:=2*a2;
+b1:=2;
 b3:=b1;
-FOR b2:=1 TO b1 DO
+FOR b2:=b1 TO b1*b1*b1*b1 DO
 BEGIN
 b3:=b3-b2
 END;

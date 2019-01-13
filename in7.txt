@@ -1,0 +1,7 @@
+PROGRAM prog1
+VAR
+a1:INTEGER
+BEGIN
+WRITE(a1)
+END.
+
