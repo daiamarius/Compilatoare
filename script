@@ -1,0 +1,4 @@
+dos2unix in.txt
+yacc -d exvar.y
+lex exvar.l
+g++ lex.yy.c y.tab.c -o exvar -lfl
